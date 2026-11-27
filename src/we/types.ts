@@ -1,4 +1,17 @@
-import type { FreeUnitDetail } from "../db/schema.js";
+export interface FreeUnitDetail {
+  initialAmount: number;
+  currentAmount: number;
+  measureUnit: string;
+  effectiveTime: number;
+  expireTime: number;
+  expireTimeCz?: number;
+  originType: string;
+  offeringName: string;
+  isGroup: boolean;
+  serviceNumber: string;
+  itemCode: string;
+  remainingDaysForRenewal?: number;
+}
 
 export interface ApiResponseHeader {
   retCode: string;

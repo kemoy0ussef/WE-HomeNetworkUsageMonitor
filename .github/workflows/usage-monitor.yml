@@ -31,7 +31,9 @@ jobs:
 
       - name: Fetch and store usage snapshot
         env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
+          WE_MONITOR_SECRET: ${{ secrets.WE_MONITOR_SECRET }}
           SERVICE_NUMBER: ${{ secrets.SERVICE_NUMBER }}
           PASSWORD: ${{ secrets.PASSWORD }}
         run: node dist/index.js --no-interactive

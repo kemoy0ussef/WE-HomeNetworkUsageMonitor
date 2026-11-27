@@ -1,10 +1,9 @@
 import { defineConfig } from "oxlint";
 import core from "ultracite/oxlint/core";
-import drizzle from "ultracite/oxlint/drizzle";
 
 export default defineConfig({
   env: core.env,
-  extends: [core, drizzle],
+  extends: [core],
   ignorePatterns: core.ignorePatterns,
   rules: {
     "func-style": ["error", "declaration"],
